@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCH | The Evolution of DSS Colony</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --brand-blue: #00a8ff;
+            --brand-vibrant: #ff006e;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #050505;
+            color: #ffffff;
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .vibrant-gradient {
+            background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-vibrant) 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #00d2ff 0%, #ff006e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-mesh {
+            background-color: #050505;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 168, 255, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 0, 110, 0.2) 0px, transparent 50%);
+        }
+
+        .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bento-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-8px);
+        }
+
+        .announcement-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 168, 255, 0.3);
+            backdrop-blur: 10px;
+        }
+
+        .glow-button {
+            box-shadow: 0 0 20px rgba(0, 168, 255, 0.2);
+        }
+
+        .glow-button:hover {
+            box-shadow: 0 0 40px rgba(0, 168, 255, 0.5);
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body class="selection:bg-pink-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="35" cy="35" r="12" fill="#00a8ff"/>
+                        <circle cx="65" cy="65" r="12" fill="#00a8ff"/>
+                        <path d="M15 65C15 45 35 45 35 45C35 45 55 45 55 65C55 85 85 85 85 65" stroke="#00a8ff" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-tighter leading-none">SOCH</span>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">The Evolution</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-10 text-sm font-bold uppercase tracking-widest">
+                    <a href="#handover" class="hover:text-cyan-400 transition">The Handover</a>
+                    <a href="#status" class="hover:text-cyan-400 transition">Member Status</a>
+                    <a href="#status" class="px-6 py-2.5 vibrant-gradient rounded-full glow-button transition transform active:scale-95">Update My Joining</a>
+                </div>
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Announcement -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-mesh overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-6 py-2 announcement-badge rounded-full mb-8">
+                <span class="text-xs font-black uppercase tracking-[0.4em] text-cyan-400">Official Announcement</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[0.85]">
+                DSS COLONY <br>
+                <span class="text-gradient italic">IS NOW</span> <br>
+                <span class="text-white underline decoration-cyan-500 decoration-8 underline-offset-8">SOCH.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-xl text-slate-400 mb-12 leading-relaxed font-light">
+                From 2018–2023, we captured the streets. In 2024, we build the future. We are inviting every member of the DSS Colony family to <span class="text-white font-semibold">imbibe the spirit of SOCH.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#status" class="px-10 py-5 bg-white text-black font-black rounded-2xl hover:bg-cyan-400 hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl">
+                    UPDATE JOINING STATUS
+                </a>
+                <a href="#handover" class="px-10 py-5 border border-white/20 font-black rounded-2xl hover:bg-white/10 transition-all backdrop-blur-md">
+                    READ OUR STORY
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Handover Content -->
+    <section id="handover" class="py-32 bg-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bento-card p-8 rounded-3xl text-center">
+                            <span class="text-4xl font-black text-cyan-400">3.6L</span>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">DSS Legacy Reach</p>
+                        </div>
+                        <div class="bento-card p-8 rounded-3xl text-center">
+                            <span class="text-4xl font-black text-pink-500">2018</span>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">Foundation Year</p>
+                        </div>
+                        <div class="bento-card p-8 rounded-3xl text-center md:col-span-2 bg-gradient-to-r from-teal-500/10 to-transparent">
+                            <p class="text-sm font-medium leading-relaxed italic">
+                                "We move from the screen to the soil. Our thought (Soch) now becomes our action."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-5xl font-black mb-8 leading-tight">The <span class="text-cyan-400">Handover</span> of <br>Legacy into Leadership.</h2>
+                    <p class="text-slate-400 text-lg mb-6 font-light leading-relaxed">
+                        To the volunteers, the creators, and the viewers who made **DSS Colony** Darjeeling's heartbeat: The mission is evolving. 
+                    </p>
+                    <p class="text-slate-400 text-lg mb-8 font-light leading-relaxed">
+                        SOCH (Shaping Our Community’s Happiness) isn't just a name change. It's a commitment to move beyond videos and experiments into **structured community development and youth advocacy.**
+                    </p>
+                    <div class="flex items-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <div class="w-12 h-12 rounded-full vibrant-gradient flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-users text-white"></i>
+                        </div>
+                        <p class="text-sm font-bold text-slate-300 uppercase tracking-widest">Calling all DSS Colony Members to Re-Register.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Update Form -->
+    <section id="status" class="py-32 hero-mesh">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bento-card p-12 md:p-20 rounded-[4rem] relative">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-black mb-4">Member Status Update</h2>
+                    <p class="text-slate-400 uppercase tracking-[0.3em] font-bold text-xs">Integrate into the SOCH Movement</p>
+                </div>
+                
+                <form id="status-form" class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-slate-500 ml-2">Full Name</label>
+                            <input type="text" id="member-name" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-cyan-500 transition text-white" placeholder="Enter name">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-slate-500 ml-2">Phone / WhatsApp</label>
+                            <input type="text" id="member-phone" required class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-cyan-500 transition text-white" placeholder="Contact number">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-500 ml-2">Your History with DSS Colony</label>
+                        <select id="member-history" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-cyan-500 transition appearance-none text-white">
+                            <option class="bg-black" value="Active Volunteer">Active Volunteer (Field Work)</option>
+                            <option class="bg-black" value="Content Creator">Content Creator / Technical Team</option>
+                            <option class="bg-black" value="Core Community Member">Core Community Member</option>
+                            <option class="bg-black" value="Long-time Supporter">Long-time Viewer / Supporter</option>
+                            <option class="bg-black" value="New Member">New Member (Never joined DSS)</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-500 ml-2">How would you like to Imbibe in SOCH?</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2" id="imbibe-options">
+                            <label class="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-2xl cursor-pointer hover:bg-white/10 transition">
+                                <input type="checkbox" value="Youth Leadership" class="w-5 h-5 rounded border-white/20 accent-cyan-500">
+                                <span class="text-sm font-medium">Youth Leadership</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-2xl cursor-pointer hover:bg-white/10 transition">
+                                <input type="checkbox" value="Community Service" class="w-5 h-5 rounded border-white/20 accent-cyan-500">
+                                <span class="text-sm font-medium">Community Service</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-2xl cursor-pointer hover:bg-white/10 transition">
+                                <input type="checkbox" value="Media & Awareness" class="w-5 h-5 rounded border-white/20 accent-cyan-500">
+                                <span class="text-sm font-medium">Media & Awareness</span>
+                            </label>
+                            <label class="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-2xl cursor-pointer hover:bg-white/10 transition">
+                                <input type="checkbox" value="Policy Research" class="w-5 h-5 rounded border-white/20 accent-cyan-500">
+                                <span class="text-sm font-medium">Policy Research</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-slate-500 ml-2">Message to the Team</label>
+                        <textarea id="member-message" rows="3" class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-cyan-500 transition text-white" placeholder="Tell us how you feel about the rebranding..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-6 vibrant-gradient rounded-3xl font-black text-xl shadow-2xl hover:scale-[1.02] active:scale-95 transition transform uppercase tracking-[0.2em] glow-button">
+                        CONFIRM MY JOINING STATUS
+                    </button>
+                    
+                    <p class="text-center text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-6">
+                        Direct Contact: <a href="https://wa.me/918918843345" target="_blank" class="text-cyan-400">+91 89188 43345</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 bg-black text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-center gap-3 mb-8">
+                <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="35" cy="35" r="12" fill="#00a8ff"/>
+                    <circle cx="65" cy="65" r="12" fill="#00a8ff"/>
+                    <path d="M15 65C15 45 35 45 35 45C35 45 55 45 55 65C55 85 85 85 85 65" stroke="#00a8ff" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                <span class="text-2xl font-black tracking-tighter">SOCH</span>
+            </div>
+            <p class="text-slate-500 text-sm max-w-lg mx-auto mb-10 leading-relaxed">
+                Celebrating 5 years of DSS Colony. Embarking on a lifetime of SOCH. Shaping Our Community’s Happiness.
+            </p>
+            <div class="flex justify-center space-x-8 mb-12 text-2xl">
+                <a href="#" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="text-slate-600 text-[10px] font-bold uppercase tracking-[0.4em]">&copy; 2024 SOCH Organization. Formerly DSS Colony.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('status-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get values
+            const name = document.getElementById('member-name').value;
+            const phone = document.getElementById('member-phone').value;
+            const history = document.getElementById('member-history').value;
+            const message = document.getElementById('member-message').value;
+            
+            // Get selected imbibe options
+            const checkedOptions = Array.from(document.querySelectorAll('#imbibe-options input[type="checkbox"]:checked'))
+                .map(cb => cb.value);
+            
+            const imbibeText = checkedOptions.length > 0 ? checkedOptions.join(', ') : 'Not specified';
+
+            // Construct WhatsApp Message
+            const whatsappNumber = "918918843345";
+            const text = `🚀 *SOCH MEMBER STATUS UPDATE* 🚀\n\n` +
+                         `*Name:* ${name}\n` +
+                         `*Contact:* ${phone}\n` +
+                         `*DSS History:* ${history}\n` +
+                         `*Interested In:* ${imbibeText}\n` +
+                         `*Message:* ${message}\n\n` +
+                         `_Sent from SOCH Announcement Portal_`;
+
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+            // Visual feedback
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "REDIRECTING TO WHATSAPP...";
+            btn.style.background = "linear-gradient(135deg, #00c853 0%, #2e7d32 100%)";
+            
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                btn.innerText = originalText;
+                btn.style.background = "";
+                e.target.reset();
+            }, 1000);
+        });
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            alert("Menu active. Explore the Handover & Status Update sections.");
+        });
+    </script>
+</body>
