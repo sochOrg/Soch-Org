@@ -1,2 +1,2 @@
-# Soch-Org
+# SochOrg
 Soch org is an Youth Organization in Darjeeling Hills
